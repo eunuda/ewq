@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--얘 폴더 바꿔야됨  -->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.test.prj.member.service.MemberMapper">
+
+<select id = "memberSelect"></select>
+<select id = "memberSelect" resultType = "co.test.prj.member.vo.MemberVO">
+SELECT *From MEMBER
+WHERE ID = #{id}
+<if test = "password !=null">
+AND PASSWORD =#{password}
+</if>
+ </select>
+
+<insert id = "memberInsert"></insert>
+<update id = "memberUpdate"></update>
+<delete id = "memberDelete"></delete>
+<select id = "isIdCheck" parameterType="">
+</select>
+</mapper>
+
+
+
+
+
+
+
+  
+
+  
